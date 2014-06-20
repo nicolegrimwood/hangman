@@ -1,0 +1,64 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title> Hangman </title>
+	<h1 id="header">Hangman</h1>
+	
+	<!-- Templates -->
+	<script type = "text/template" id = "word-template">
+			 <b><%- word %></b>	
+	</script> 
+	<script type = "text/template" id = "wrong-letter-template">
+			 <b><%- letters %></b>	
+	</script> 
+
+	<!-- Stylesheets -->
+	<link rel = "stylesheet" href = "css/base.css"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Libaries -->
+	<script src = "js/lib/jquery.min.js"></script>
+	 <script src="js/bootstrap.min.js"></script>
+	<script src = "js/lib/underscore-min.js"></script>
+	<script src = "js/lib/backbone-min.js"></script>
+	<script src = "js/lib/backbone.localStorage.js"></script> <!-- necessary?-->
+
+	<!-- Models, collections, views -->
+	<script src = "js/models/letter.js"></script>
+	<script src = "js/collections/bad-letter.js"></script>
+	<script src = "js/collections/word.js"></script>
+	<script src = "js/views/word-view.js"></script>
+	<script src = "js/views/wrong-letter-view.js"></script>
+	<script src = "js/views/man-view.js"></script>
+	<script src = "js/views/container-view.js"></script> 
+	<script src = "js/hangman.js"></script> 
+</head>
+<body>
+	<img src = "hangman0.jpg" id = "img0" width = 400px height = 300 px></img>
+	<img src = "hangman1.jpg"  id = "img1" width = 400px height = 300 px hidden></img>
+	<img src = "hangman2.jpg"  id = "img2" width = 400px height = 300 px hidden></img>
+	<img src = "hangman3.jpg"  id = "img3" width = 400px height = 300 px hidden></img>
+	<img src = "hangman4.jpg"  id = "img4" width = 400px height = 300 px hidden></img>
+	<img src = "hangman5.jpg"  id = "img5" width = 400px height = 300 px hidden></img>
+	<img src = "hangman6.jpg"  id = "img6" width = 400px height = 300 px hidden></img>
+	<img src = "hangman7.jpg"  id = "img7" width = 400px height = 300 px hidden></img>
+	<img src = "hangman8.jpg"  id = "img8" width = 400px height = 300 px hidden></img>
+	<img src = "hangman9.jpg"  id = "img9" width = 400px height = 300 px hidden></img>
+	<img src = "hangmanFinal.jpg"  id = "img10" width = 400px height = 300 px hidden></img>
+
+	<section class="hangmanGame" >
+		<div id = "the-word"></div> 
+		<div id = "letter-list"></div>
+		<br/>	
+		<div class = "form-inline">
+			<input class="form-control" id="enter-letter" placeholder="Enter a letter." autofocus>
+			<button type="button" class="btn btn-success" id="enter-button">Enter</button>
+			<button type="button" class="btn btn-info" id="new-game">New Game</button>
+		</div>
+	</section>
+</body>
+
+
+</html>
